@@ -12,7 +12,7 @@ export class HomePage {
   constructor(private modalCtrl: ModalController) {}
   
   public elemLista: Array<any> = [
-    {name: "Notificaciones", value: true},
+    {name: "Notificaciones1", value: true},
     {name: "Notificaciones2", value: false},
     {name: "Notificaciones3", value: true},
     ];
