@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 @Component({
@@ -7,6 +7,8 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./modal-settings.page.scss'],
 })
 export class ModalSettingsPage implements OnInit {
+
+  @Input() public lista2: Array<any>;
 
   constructor(private modalCtrl: ModalController) { }
 
@@ -17,14 +19,9 @@ export class ModalSettingsPage implements OnInit {
     this.modalCtrl.dismiss();
   }
   
-  public elemLista: Array<any> = [
-            {name: "Notificaciones", value: true},
-            {name: "Notificaciones2", value: false},
-            {name: "Notificaciones3", value: true},
-            ];
 
   actualizarValor(){
-    console.log(this.elemLista)
+    console.log(this.lista2)
   }
 
 }
