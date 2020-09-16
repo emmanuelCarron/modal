@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ModalController, ToastController } from '@ionic/angular';
+import { AlertController, ModalController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal-settings',
@@ -12,6 +12,7 @@ export class ModalSettingsPage implements OnInit {
 
   constructor(private modalCtrl: ModalController,
               private toastCtrl: ToastController,
+              private alertCtrl: AlertController,
               ) { }
 
   ngOnInit() {
@@ -29,8 +30,30 @@ export class ModalSettingsPage implements OnInit {
     console.log(this.lista2);
     this.presentToast('Cambio realizado');
   }
+
+  async presentAlert() {
+    const alert = await this.alertCtrl.create({
+      header: 'Salir',
+      // subHeader: 'Sub',
+      message: '¿Desea volver a la pantalla principal?',
+      buttons: [
+        {
+          text: 'Si',
+          handler: (salir) => {
+            this.modalCtrl.dismiss();
+          }
+        },
+        {
+          text: 'No',
+        }],
+    });
+
+    await alert.present();
+  }
+
   cerrarModal(){
-    this.modalCtrl.dismiss();
+    this.presentAlert();
+    
   }
   
 
