@@ -16,6 +16,7 @@ export class ModalSettingsPage implements OnInit {
               ) { }
 
   ngOnInit() {
+    console.log('desdemodal',this.lista2)
   }
 
   async presentToast(mensaje: string) {
