@@ -29,6 +29,13 @@ export class HomePage {
     console.log('Arreglo guardado: ', this.elemLista);
   }
   
+  public primerGuardado() {
+    if (this.arrLeido.length == 0){
+      this.guardarDatos();
+      console.log("1er guardado!");
+    }
+  }
+
   async leerDatos() {   
     this.arrLeido = await this.storage.get('miArreglo');
     // this.storage.get('miArreglo')
@@ -41,7 +48,8 @@ export class HomePage {
   }
 
   ngOnInit() {
-    this.guardarDatos();
+    this.leerDatos();
+    this.primerGuardado();
     this.leerDatos();
     console.log('asignado2: ', this.arrLeido);
   }
