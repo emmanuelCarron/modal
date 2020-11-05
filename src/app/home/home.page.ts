@@ -24,15 +24,18 @@ export class HomePage {
 
   public arrLeido = [];
 
-  public guardarDatos() { //ver async
-    this.storage.set('miArreglo', this.elemLista);
-    console.log('Arreglo guardado: ', this.elemLista);
+  public guardarDatos(data) {
+    this.storage.set('miArreglo', data);
+    console.log('Arreglo guardado: ', data);
   }
   
-  public primerGuardado() {
+  public guardarConfig() {
     if (this.arrLeido.length == 0){
-      this.guardarDatos();
+      this.guardarDatos(this.elemLista);
       console.log("1er guardado!");
+    } else {
+      this.guardarDatos(this.arrLeido);
+      console.log("otro guardado!");
     }
   }
 
@@ -49,7 +52,7 @@ export class HomePage {
 
   ngOnInit() {
     this.leerDatos();
-    this.primerGuardado();
+    this.guardarConfig();
     this.leerDatos();
     console.log('asignado2: ', this.arrLeido);
   }
