@@ -24,3 +24,30 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import "./styles/_buttons.scss";
+
+
+.custom-settings-alert {
+    .alert-wrapper {
+        background: white;
+        button {
+            min-width: 50px;
+            font-weight: bold;
+            span {
+                justify-content: center;
+            }
+        }
+        
+        // .alert-button:first-child {
+        //     background: cornflowerblue;
+        //     color: white;
+        // }
+        // .alert-button:nth-child(2) {
+        //     color: red;
+        // }
+    }
+}
+
+.ion-align-content-center {
+    align-self: center;
+}

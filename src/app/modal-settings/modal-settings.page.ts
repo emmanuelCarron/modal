@@ -35,17 +35,19 @@ export class ModalSettingsPage implements OnInit {
   async presentAlert() {
     const alert = await this.alertCtrl.create({
       header: 'Salir',
-      // subHeader: 'Sub',
+      cssClass: 'custom-settings-alert',
       message: '¿Desea volver a la pantalla principal?',
       buttons: [
         {
           text: 'Si',
+          cssClass: 'ok-button',
           handler: (salir) => {
             this.modalCtrl.dismiss();
           }
         },
         {
           text: 'No',
+          cssClass: 'cancel-button',
         }],
     });
 
