@@ -1,0 +1,43 @@
+sudo ionic cordova resources --verbose
+  ionic:bootstrap local CLI 5.4.16 found at /home/emmanuel/node_modules/ionic/package.json +0ms
+  ionic:lib Terminal info: { ci: false, shell: '/bin/bash', tty: true, windows: false } +0ms
+  ionic:lib CLI global options: { _: [ 'cordova', 'resources' ], help: null, h: null, verbose: true, quiet: null, interactive: true, color: true, confirm: null, json: null, project: null, '--': [] } +3ms
+  ionic:lib:project Project type from config: @ionic/angular (angular) +0ms
+  ionic:lib:project Project details: { configPath: '/home/emmanuel/Trabajo/Búho/modal/ionic.config.json', errors: [], context: 'app', type: 'angular' } +1ms
+  ionic Context: { binPath: '/home/emmanuel/node_modules/ionic/bin/ionic', libPath: '/home/emmanuel/node_modules/ionic', execPath: '/home/emmanuel/Trabajo/Búho/modal/resources', version: '5.4.16' } +0ms
+  ionic:lib:integrations:cordova:config Loading Cordova Config (config.xml: '/home/emmanuel/Trabajo/Búho/modal/config.xml', package.json: '/home/emmanuel/Trabajo/Búho/modal/package.json') +0ms
+> cordova-res --verbose
+  ionic:lib:telemetry Sending telemetry for command: 'ionic cordova resources' [ '--verbose', '--interactive', '--color' ] +0ms
+[cordova-res] /usr/local/lib/node_modules/cordova-res/node_modules/sharp/lib/constructor.js:34
+[cordova-res]   throw new Error(error);
+[cordova-res]   ^
+[cordova-res] 
+[cordova-res] Error: 
+[cordova-res] Something went wrong installing the "sharp" module
+[cordova-res] 
+[cordova-res] Cannot find module '../build/Release/sharp.node'
+[cordova-res] 
+[cordova-res] - Run "npm rebuild --verbose sharp" and look for errors
+[cordova-res] - Consult the installation documentation at https://sharp.pixelplumbing.com/install
+[cordova-res] - Search for this error at https://github.com/lovell/sharp/issues
+[cordova-res] 
+[cordova-res]     at Object.<anonymous> (/usr/local/lib/node_modules/cordova-res/node_modules/sharp/lib/constructor.js:34:9)
+[cordova-res]     at Module._compile (internal/modules/cjs/loader.js:778:30)
+[cordova-res]     at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+[cordova-res]     at Module.load (internal/modules/cjs/loader.js:653:32)
+[cordova-res]     at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+[cordova-res]     at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+[cordova-res]     at Module.require (internal/modules/cjs/loader.js:692:17)
+[cordova-res]     at require (internal/modules/cjs/helpers.js:25:18)
+[cordova-res]     at Object.<anonymous> (/usr/local/lib/node_modules/cordova-res/node_modules/sharp/lib/index.js:3:15)
+[cordova-res]     at Module._compile (internal/modules/cjs/loader.js:778:30)
+[ERROR] An error occurred while running subprocess cordova-res.
+        
+        cordova-res --verbose exited with exit code 1.
+        
+        Re-running this command with the --verbose flag may provide more
+        information.
+  ionic:utils-process onBeforeExit handler: 'process.exit' received +0ms
+  ionic:utils-process onBeforeExit handler: running 1 functions +0ms
+  ionic:utils-process processExit: exiting (exit code: 1) +23ms
+
